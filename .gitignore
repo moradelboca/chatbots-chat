@@ -1,0 +1,5 @@
+.env
+myenv
+*.pdf
+*.log
+__pycache__
