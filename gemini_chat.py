@@ -27,5 +27,6 @@ def send_message(message):
     global chat_session
     response = chat_session.send_message(message)
     # 30 seconds delay to avoid rate limiting in free google api
-    time.sleep(30)
+    if os.environ['FREE_GEMINI'] == True:
+        time.sleep(30)
     return response.text
